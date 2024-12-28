@@ -11,7 +11,6 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
 # Loading the dataset///
 mnist = krs.datasets.mnist 
 
@@ -22,7 +21,6 @@ mnist = krs.datasets.mnist
 # Normalizing...
 x_train, x_test = x_train / 255.0, x_test / 255.0  # This will normalize the Training and Testing Data
                                                    # It will convert the data into the range of 0 - 1 
-
 # Step 3: Build the model
 from tensorflow.keras.layers import Flatten, Dense
 model = Sequential([
@@ -30,7 +28,6 @@ model = Sequential([
     Dense(128, activation='relu'),  # Hidden layer with 128 neurons and ReLU activation
     Dense(10, activation='softmax')  # Output layer with 10 neurons (one for each class)
 ])
-
 # Step 4: Compile the model
 from tensorflow.keras.losses import SparseCategoricalCrossentropy as SpCtgCrossEntropy
 from tensorflow.keras.optimizers import Adam as adam
@@ -39,14 +36,12 @@ model.compile(
   loss=SpCtgCrossEntropy(), 
   metrics=['accuracy'],
 )
-
 # Step 5: Train the model
 model.fit(x_train, y_train, epochs=5)
 
 # Step 6: Evaluate the model
 test_loss, test_accuracy = model.evaluate(x_test, y_test)
 print(f"\nTest Accuracy: {test_accuracy:.2f}\n\n")
-
 
 # Step 7: Visualize predictions
 predictions = model.predict(x_test)

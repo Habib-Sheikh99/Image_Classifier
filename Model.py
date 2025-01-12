@@ -1,4 +1,4 @@
-import pandas as pd
+koimport pandas as pd
 import numpy as np
 
 from tensorflow import keras as krs
@@ -55,3 +55,12 @@ for i in range(9):
     plt.axis('off') # If you need explanation on this, Go to a Doctor! 
 plt.show()
 # Analyze  the Model to Make Changes, *(Ofcourse!!!!!!!!)
+
+
+
+# just doing some shit to for a commit streak 
+
+import numpy as np
+ 
+xdata = np. random. rand(1200, 28)
+model. fit ( xdata )

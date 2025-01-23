@@ -54,13 +54,6 @@ for i in range(9):
     plt.title(f"Pred: {predictions[i].argmax()}, True: {y_test[i]}") # And These are the labels on those images.
     plt.axis('off') # If you need explanation on this, Go to a Doctor! 
 plt.show()
+
 # Analyze  the Model to Make Changes, *(Ofcourse!!!!!!!!)
 
-
-
-# just doing some shit to for a commit streak 
-
-import numpy as np
- 
-xdata = np. random. rand(1200, 28)
-model. fit ( xdata )
